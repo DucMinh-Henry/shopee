@@ -1,0 +1,355 @@
+.app {
+    overflow: hidden;
+}
+
+.header {
+    height: var(--header-height);
+    background-color: var(--header-color);
+}
+.header__navbar {
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+}
+/* header menu */
+.header__navbar-menu {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+}
+.header__logo {
+}
+.header__logo-link {
+    width: 130px;
+    height: 37px;
+}
+.header__logo-link:hover {
+    cursor: pointer;
+}
+.header__navbar-menu-list {
+    padding: 0 60px;
+    height: 100%;
+    margin: 0;
+    display: flex;
+}
+.header__navbar-menu-item {
+    display: flex;
+    list-style: none;
+    font-size: 1.4rem;
+    padding: 0 15px 0 15px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* hover vào game */
+
+.header__navbar-menu-item:nth-child(4):hover .header__game {
+    display: block;
+}
+
+/* hover vào Esports */
+
+.header__navbar-menu-item:nth-child(5):hover .header__esports {
+    display: block;
+}
+
+.header__navbar-menu-item a {
+    display: flex;
+    text-decoration: none;
+    color: var(--text-color);
+}
+.header__navbar-menu-item a:hover {
+    color: var(--white-color);
+    border: 1pt #202020;
+}
+.header__navbar-menu-icon {
+    padding-left: 5px;
+
+}
+/* Notify Game */
+.header__game {
+    position: absolute;
+    display: block;
+    background-color: #1e1e1e;
+    width: 420px;
+    height: 350px;
+    border-top: 2px solid #262626;
+    border-radius: 4px;
+    left: 272px;
+    top: 52px;
+    padding: 20px;
+    display: none;
+    /* Thuộc tính góc biến đổi */
+    transform-origin: top;
+    animation: headerGrowth ease-in 0.3s;
+    will-change: opacity, transform;
+}
+
+.header__game::before {
+    content: "";
+    position: absolute;
+    display: block;
+    border-width: 10px 11px;
+    border-color: transparent transparent #1e1e1e transparent;
+    border-style: solid;
+    top: -18px;
+    right: 210px;
+}
+
+.header__game-header h2{
+    color: var(--white-color);
+    font-size: 1.6rem;
+    margin: 0 0 10px 0;
+}
+
+.header__game-list {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-columns: auto auto auto;
+    padding: 0;
+    left: 0;
+    right: 0;
+}
+
+.header__game-item {
+    padding: 0;
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    float: left;
+}
+
+.header__game-item-link {
+    position: relative;
+}
+
+.header__game-item-img {
+    width: 120px;
+    height: 75px;
+    border-radius: 4px;
+}
+
+.header__game-name {
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    left: 0;
+    height: 20px;
+    padding-left: 3px;
+    color: var(--white-color);
+    background: -webkit-gradient(linear,right top,left top,from(transparent),to(#000));
+    background: linear-gradient(270deg,transparent,#000);
+    border-radius: 0 0 5px 5px;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0 5px;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.header__game-foter {
+    width: 100%;
+    background-color: #313131;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: var(--text-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Notify Esports */
+
+.header__esports {
+    position: absolute;
+    display: inline-block;
+    background-color: #1e1e1e;
+    width: 420px;
+    height: 350px;
+    border-top: 2px solid #262626;
+    border-radius: 5px;
+    left: 353px;
+    top: 52px;
+    padding: 20px;
+    display: none;
+    transform-origin: top;
+    animation: headerGrowth ease-in 0.3s;
+    will-change: opacity, transform;
+}
+
+.header__esports::before {
+    content: "";
+    position: absolute;
+    display: block;
+    border-width: 10px 11px;
+    border-color: transparent transparent #1e1e1e transparent;
+    border-style: solid;
+    top: -18px;
+    right: 210px;
+}
+
+.header__esport-list {
+    display: grid;
+    column-gap: 8px;
+    row-gap: 8px;
+    grid-template-columns: auto auto;
+    padding: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+}
+
+.header__esports-item {
+    display: flex;
+    list-style: none;
+    width: 186px;
+    height: 83px;
+    background-color: #323232;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 0 0 0 20px;
+    cursor: pointer;
+}
+
+.header__esports-item:hover .header__esports-name {
+    color: #4f07eb;
+}
+
+.header__esports-link {
+    text-decoration: none;
+}
+
+.header__esports-img {
+    width: 45px;
+    padding-right: 10px;
+    padding-left: 0px;
+}
+
+.header__esports-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white-color);
+}
+
+
+/* header minor */
+.header__navbar-minor {
+    display: flex;
+}
+.header__navbar-minor-list {
+    display: flex;
+    color: #fff;
+    align-items: center;
+    padding: 0;
+    font-size: 1.6rem;
+    user-select: none;
+}
+.header__navbar-minor-item {
+    padding: 0 12px;
+    list-style: none;
+}
+.header__navbar-minor-item a:hover {
+    color: var(--white-color);
+}
+.header__search {
+    background-color: #313131;
+    width: 132px;
+    height: var(--header-search);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+.header__search-input:focus ~ .header__search{
+    display: block;
+}
+
+.header__search-icon {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin: 0px 8px 0 10px;
+    cursor: pointer;
+}
+.header__search-input {
+    background: transparent;
+    border: 1px solid transparent;
+    width: 83px;
+    height: var(--header-search);
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+.header__search-input:focus {
+    outline: none;
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+.header__navbar-minor-recharger {
+    border-radius: 30px;
+    border: 1px solid var(--white-color);
+    width: 102px;
+    height: 24px;
+}
+.header__recharger {
+    display: flex;
+    align-items: center;
+    padding-left: 6px;
+    font-size: 1.4rem;
+}
+.header__recharger:hover {
+    cursor: pointer;
+}
+.header__recharger-icon {
+    background-image: url(https://www.nimo.tv/nms/images/topup-diamond.54c407baed259dfc727efa5806af92df.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 22px;
+    width: 22px;
+}
+.header__golive {
+    display: flex;
+    align-items: center;
+}
+.header__navbar-minor-item a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+.header__navbar-minor-item .header__golive-icon {
+    background-image: url(https://www.nimo.tv/nms/images/go-live-181212.55fd4578a0194faec3548b1645b1c896.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 24.5px;
+    width: 34px;
+}
+.header__navbar-minor-icon {
+    font-size: 2.0rem;
+}
+.header__navbar-minor-item .header__navbar-minor-icon:hover {
+    color: var(--white-color);
+}
+.header__navbar-avatar {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.header__navbar-avatar-link {
+    display: flex;
+}
+.header__navbar-avatar .header__navbar-avatar-icon {
+    background-image: url(https://www.nimo.tv/nms/images/avatar-60x60.6dd92867605b133147fe391680b98efa.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+}
+/* container */
+.container {
+
+}

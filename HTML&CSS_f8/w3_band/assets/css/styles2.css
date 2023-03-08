@@ -1,0 +1,399 @@
+/* reset css */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+1. làm từ ngoài vào trong
+2. từ trên xuống dưới
+3. tổng quan đến chi tiết
+*/
+/* 
+1. vị trí
+2. kích thước(wirth, height)
+3. màu sắc
+4. kiểu dáng(kiểu chữ, hình tròn, vuông,...)
+*/
+
+/* Common */
+
+#main{
+
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+    display: flex;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    padding-left: 8px;
+    padding-right: 8px;
+    float: left;
+}
+
+.col-third {
+    width: 33.333333%;
+}
+
+.col-half {
+    width: 49.9999999%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.full-right {
+    float: right !important;
+}
+
+/* main */
+
+#header{
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav, .subnav{
+    list-style-type: none;
+}
+
+#nav > li{
+    display: inline-block;
+}
+
+#nav li{
+    position: relative;
+    display: inline-block;
+}
+
+#nav > li > a{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a{
+    text-decoration: none;
+    padding: 0 24px;
+    line-height: 46px;
+    display: block;
+    font-size: 15px;
+}
+
+#nav .subnav {
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    top: 100%;
+    left: 0;
+}
+
+#nav .subnav a {
+    color: #000;
+    min-width: 160px;
+    height: 38px;
+    padding: 0 12px;
+}
+
+#nav > li:hover > a,
+#nav .subnav > li:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+.nav-arrow-down {
+    font-size: 14px;
+}
+
+#header .search-btn {
+    float: right; 
+    padding: 0 21px;
+}
+
+#header .search-btn:hover {
+    cursor: pointer;
+    background-color: #f44336;
+}
+
+#header .search-icon { 
+    font-size: 20px;
+    line-height: 46px;
+    color: #fff;
+}
+
+#slider{
+    padding-top: 50%;
+    margin-top: 46px;
+    background: url('../imgs/chicago.jpg') top center / cover no-repeat;
+    position: relative;
+}
+
+#slider .text-content {
+    color: #fff;
+    text-align: center;
+    bottom: 48px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#slider .text-heading {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+#slider .text-description {
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+
+#content {
+}
+
+#content .content-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0 112px;
+}
+
+#content .section-heading {
+    font-weight: 400;
+    font-size: 30px;
+    margin: 10px 0;
+    text-align: center;
+    letter-spacing: 4px;
+    box-sizing: initial;
+}
+
+#content .section-sub-heading {
+    text-align: center;
+    opacity: 0.6;
+    margin: 15px 0;
+}
+
+#content .about-text {
+    text-align: justify;
+}
+
+
+#content .members-list {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}   
+
+#content .text-center {
+    width: 33.3333%;
+    padding-left: 8px;
+    padding-right: 8px;
+    float: left;
+    text-align: center;
+}
+
+#content .member-name {
+    font-size: 15px;
+    padding: 15px 0;
+}
+
+#content .member-img {
+    width: 60%;
+    border-radius: 4px;
+}
+
+#content .clear {
+    clear: both;
+}
+
+.tour-section {
+    background-color: #000;
+    color: #fff;
+}
+
+.content-section {
+}
+
+.section-heading {
+
+}
+
+.section-sub-heading {
+
+}
+
+.ticket-list {
+    list-style: none;
+    font-size: 15px;
+    padding-top: 40px;
+    text-align: left;
+}
+
+.ticket-list li {
+    background-color: #fff;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ccc;
+    color: #757575!important;
+}
+
+.ticket-list .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.ticket-list .quantity {
+    float: right;
+    border-radius: 50%;
+    background-color: #000;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    color: #fff;
+    line-height: 24px;
+    margin-top: -3px;
+}
+
+.place-list {
+    padding-top: 32px;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-body {
+    background-color: #fff;
+    color: #000;
+    font-size: 15px;
+    padding: 16px;
+}
+
+.place-heading {
+    display: contents;
+    font-weight: 600;
+
+}
+
+.place-time {
+    margin: 15px 0;
+    opacity: 0.6;
+}
+
+.place-desc {
+    margin: 15px 0;
+    line-height: 1.2;
+}
+
+.btn {
+    background-color: #000;
+    color: #fff;
+    padding: 11px 16px;
+    display: block;
+    font-size: 15px;
+    border: none;
+}
+
+.btn:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+.contact-section {
+    padding-top: 32px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class*=ti-] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 18px;
+}
+
+.contact-form .form-control {
+    font-size: 15px;
+    padding: 8px;
+    width: 100%;
+    border: solid 1px #ccc;
+}
+
+.map-section img {
+    width: 100%;
+}
+
+#footer{
+    text-align: center;
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+}
+
+.socials-list {
+    font-size: 24px;
+}
+
+.socials-list a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.socials-list a:hover {
+    opacity: 0.6;
+}
+
+#footer .coppyright {
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+#footer .coppyright a{
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}

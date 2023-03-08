@@ -1,0 +1,33 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #969696;
+    --header-color: #1a1a1a;
+    --header-height: 60px;
+    --header-search: 24px;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* Animation */
+
+@keyframes headerGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
